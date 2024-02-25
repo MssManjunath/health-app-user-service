@@ -5,8 +5,7 @@ pipeline {
         stage('Fetch Code from GitHub') {
             steps {
                 script {
-                    // Clone code from GitHub repository
-                    git credentialsId: 'github-credentials', url: 'https://github.com/your-username/your-repository.git'
+                    git credentialsId: 'My_Git', url: 'https://github.com/your-username/your-repository.git'
                 }
             }
         }
