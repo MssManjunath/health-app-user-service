@@ -8,7 +8,6 @@ require('dotenv').config()
 
 var port = process.env.PORT || 8080;
 
-mongoose.connect("mongodb+srv://saimmanjunath:HgJ1e38iX4kLISl1@cluster0.ogto6im.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser:true});app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
