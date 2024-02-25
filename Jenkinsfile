@@ -5,10 +5,11 @@ pipeline {
         stage('Fetch Code from GitHub') {
             steps {
                 script {
-                    url: 'https://github.com/your-username/your-repository.git'
+                    git url: 'https://github.com/your-username/your-repository.git'
                 }
             }
         }
+        
         stage('Build Docker Image') {
             steps {
                 // Build Docker image using Dockerfile
