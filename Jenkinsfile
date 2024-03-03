@@ -14,7 +14,7 @@ pipeline {
             steps {
                 // Build Docker image using Dockerfile
                 script {
-                    docker.build("your-docker-image:latest", "-f Dockerfile .")
+                    docker.build("user-service-image:latest", "-f Dockerfile .")
                 }
             }
         }
@@ -25,7 +25,7 @@ pipeline {
                     // Log in to Docker registry
                     docker.withRegistry('https://your.docker.registry', 'docker-registry-credentials') {
                         // Push Docker image to registry
-                        docker.image("your-docker-image:latest").push()
+                        docker.image("user-service-image:latest").push()
                     }
                 }
             }
