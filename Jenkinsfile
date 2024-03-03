@@ -12,7 +12,6 @@ pipeline {
         
         stage('Build Docker Image') {
             steps {
-                // Build Docker image using Dockerfile
                 script {
                     docker.build("user-service-image:latest", "-f Dockerfile .")
                 }
