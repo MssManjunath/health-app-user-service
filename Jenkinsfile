@@ -5,7 +5,7 @@ pipeline {
         stage('Fetch Code from GitHub') {
             steps {
                 script {
-                    git url: 'https://github.com/your-username/your-repository.git'
+                    git url: 'https://github.com/MssManjunath/health-app-user-service.git'
                 }
             }
         }
