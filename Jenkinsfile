@@ -13,7 +13,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("user-service-image:latest", "-f Dockerfile .")
+                    sh 'docker build -t user-service-image -f /Dockerfile .'
                 }
             }
         }
