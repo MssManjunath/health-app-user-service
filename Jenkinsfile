@@ -5,7 +5,7 @@ pipeline {
         stage('Fetch Code from GitHub') {
             steps {
                 script {
-                    git url: 'https://github.com/MssManjunath/health-app-user-service.git'
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], userRemoteConfigs: [[url: 'https://github.com/MssManjunath/health-app-user-service.git']]])
                 }
             }
         }
